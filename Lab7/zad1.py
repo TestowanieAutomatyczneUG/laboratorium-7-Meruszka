@@ -7,6 +7,32 @@ class Planta:
         31.688087814
         >>> p.wiek(2134835688, "Merkury")
         280.8793342399
+        >>> p.wiek(9999999999, "Wenus")
+        515.0882468309
+        >>> p.wiek(9999999999, "Jowisz")
+        26.7125653246
+        >>> p.wiek(9999999999, "Neptun")
+        1.9229221424
+        >>> p.wiek(-200, "NAKLEJKA")
+        Traceback (most recent call last):
+          File "/snap/pycharm-community/252/plugins/python-ce/helpers/pycharm/docrunner.py", line 139, in __run
+            compileflags, 1), test.globs)
+          File "<doctest zad1.Planta.wiek[6]>", line 1, in <module>
+            p.wiek(-200, "NAKLEJKA")
+          File "/home/LABPK/smerski/PycharmProjects/laboratorium-7-Meruszka/Lab7/zad1.py", line 47, in wiek
+            raise ValueError("Wiek musi byc wiekszy od zera")
+        ValueError: Wiek musi byc wiekszy od zera
+        >>> p.wiek(100, 100)
+        Traceback (most recent call last):
+          File "/snap/pycharm-community/252/plugins/python-ce/helpers/pycharm/docrunner.py", line 139, in __run
+            compileflags, 1), test.globs)
+          File "<doctest zad1.Planta.wiek[7]>", line 1, in <module>
+            p.wiek(100, 100)
+          File "/home/LABPK/smerski/PycharmProjects/laboratorium-7-Meruszka/Lab7/zad1.py", line 58, in wiek
+            raise TypeError("Nazwa musi byc stringiem")
+        TypeError: Nazwa musi byc stringiem
+        >>> p.wiek(100000, "Mars")
+        0.0016848055
         >>> p.wiek(100, "axx")
         Traceback (most recent call last):
           File "/usr/lib/python3.6/doctest.py", line 1330, in __run
